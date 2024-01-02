@@ -10,17 +10,17 @@ export interface MenuItemResp {
 const resp: MenuItemResp[] = [
     {
         label: "仪表盘",
-        key: "/WorkflowLayout/TestDashboard",
+        key: "/TestDashboard",
         icon: <AiFillDashboard />,
     },
     {
         label: "表单设计",
-        key: "/WorkflowLayout/TestFormDesign",
+        key: "/TestFormDesign",
         icon: <AiOutlineForm />,
     },
     {
         label: "模型设计",
-        key: "/WorkflowLayout/TestBpmnModel",
+        key: "/TestBpmnModel",
         icon: <AiOutlineAntDesign />,
     }
 ];

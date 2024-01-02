@@ -5,7 +5,7 @@ import path from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   // for GitHub pages
-  base: '/example-ui',
+  base: '/example-ui/',
   plugins: [react()],
   resolve: {
     // https://cn.vitejs.dev/config/#resolve-alias
