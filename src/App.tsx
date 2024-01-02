@@ -46,7 +46,8 @@ export default function App() {
             }}
         >
             <AntdApp component={false}>
-                {/*<StyleProvider hashPriority="high" transformers={[legacyLogicalPropertiesTransformer]}>*/}
+                {/*https://github.com/ant-design/cssinjs/issues/96*/}
+                {/*<StyleProvider hashPriority="high" transformers={[legacyLogicalPropertiesTransformer>*/}
                 <StyleProvider hashPriority="high">
                     <RouterProvider router={router} />
                 </StyleProvider>
