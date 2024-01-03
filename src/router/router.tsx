@@ -1,9 +1,10 @@
-import { AdminLayout } from "@/layout/AdminLayout.tsx";
 import WorkflowLayout from "@/layout/WorkflowLayout.tsx";
-import TestBpmnModel from "@/pages/TestBpmnModel.tsx";
-import TestDashboard from "@/pages/TestDashboard.tsx";
-import TestFormDesign from "@/pages/TestFormDesign.tsx";
+import React from "react";
 import { createHashRouter } from "react-router-dom";
+
+const TestDashboard = React.lazy(() => import('@/pages/TestDashboard.tsx'));
+const TestFormDesign = React.lazy(() => import('@/pages/TestFormDesign.tsx'));
+const TestBpmnModel = React.lazy(() => import('@/pages/TestBpmnModel.tsx'));
 
 export const router = createHashRouter([
   {
@@ -23,15 +24,5 @@ export const router = createHashRouter([
         element: <TestBpmnModel />,
       },
     ],
-  },
-  {
-    path: "/AdminLayout",
-    element: <AdminLayout />,
-    children: [
-      {
-        path: "TestDashboard",
-        element: <TestDashboard />,
-      },
-    ],
-  },
+  }
 ]);

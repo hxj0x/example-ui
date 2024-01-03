@@ -1,9 +1,8 @@
-import dayjs from "dayjs";
+import { useTheme } from "@/context/theme-provider.tsx";
 import { App as AntdApp, ConfigProvider, theme as antdTheme } from "antd";
-import { StyleProvider } from "@ant-design/cssinjs";
+import dayjs from "dayjs";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./router/router.tsx";
-import { useTheme } from "@/context/theme-provider.tsx";
 
 dayjs.locale("zh-cn");
 
@@ -48,9 +47,9 @@ export default function App() {
             <AntdApp component={false}>
                 {/*https://github.com/ant-design/cssinjs/issues/96*/}
                 {/*<StyleProvider hashPriority="high" transformers={[legacyLogicalPropertiesTransformer>*/}
-                <StyleProvider hashPriority="high">
+                {/* <StyleProvider hashPriority="high"> */}
                     <RouterProvider router={router} />
-                </StyleProvider>
+                {/* </StyleProvider> */}
             </AntdApp>
         </ConfigProvider>
     )
