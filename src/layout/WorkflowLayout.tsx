@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { Suspense, useRef, useState } from "react";
 import { useLocation, useOutlet } from "react-router-dom";
 import { PageHeader } from "./PageHeader";
 import { RouteTabs } from "./RouteTabs";
@@ -54,7 +54,11 @@ const WorkflowLayout: React.FC = () => {
                          }}>
                         <RouteTabs onTabRemove={handleTabRemove} />
                     </div>
-                    <div className="mx-6 mt-2">{outlet}</div>
+                    <div className="mx-6 mt-2">
+                        <Suspense fallback={<h1>Loading</h1>}>
+                        {outlet}
+                        </Suspense>
+                    </div>
                 </Content>
             </Layout>
         </Layout>
